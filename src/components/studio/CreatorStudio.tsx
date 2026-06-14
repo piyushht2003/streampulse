@@ -47,7 +47,7 @@ function StudioVideoContent() {
       <div className={`w-full h-full grid gap-4 ${tracks.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
         {tracks.map((t) => (
           <div key={t.participant.identity + t.source} className="w-full h-full relative rounded-xl overflow-hidden border border-foreground/10 shadow-2xl bg-zinc-900">
-            <VideoTrack trackRef={t} className="w-full h-full object-contain" />
+            <VideoTrack trackRef={t as any} className="w-full h-full object-contain" />
             <div className="absolute top-2 left-2 px-2 py-1 bg-background/80 backdrop-blur-md rounded-md text-xs font-semibold text-foreground/80">
               {t.source === Track.Source.Camera ? "Webcam" : "Screen Share"}
             </div>
