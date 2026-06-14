@@ -24,6 +24,7 @@ import "@livekit/components-styles";
 interface CreatorStudioProps {
   userId: string;
   username: string;
+  initialStreamTitle?: string;
 }
 
 // Custom component to render the Creator's own camera and screen share nicely
